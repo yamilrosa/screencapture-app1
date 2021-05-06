@@ -16,7 +16,7 @@ function Secret() {
     return (
       <div className="py-5 text-center">
         <h1>{secret.message}</h1>
-        <img src={`./screenshot.png`} class="img-fluid" alt="..."></img>
+        <img src="./screenshot.png" class="img-fluid" alt="..."></img>
       </div>
     );
   }

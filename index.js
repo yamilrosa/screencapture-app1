@@ -33,25 +33,25 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-app.post("/secret", async (req, res) => {
+app.post("/secret", (req, res) => {
   if (req.body.password == "qwerty") {
     let url = req.body.username;
 
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    await page.goto(url);
+    // const browser = await puppeteer.launch();
+    // const page = await browser.newPage();
+    // await page.goto(url);
 
-    page.setViewport({ width: 1920, height: 1080 });
-    await page.screenshot({
-      path: `./public/screenshot.png`,
-      fullPage: true
-    });
-    // await page.screenshot({ path: `screenshot${Date.now()}.png` });
-    await res.json({ message: url, status: "success" });
+    // page.setViewport({ width: 1920, height: 1080 });
+    // await page.screenshot({
+    //   path: `./public/screenshot.png`,
+    //   fullPage: true
+    // });
+    // // await page.screenshot({ path: `screenshot${Date.now()}.png` });
+    // await res.json({ message: url, status: "success" });
 
-    await browser.close();
+    // await browser.close();
 
-    // res.json({ message: url, status: "success" });
+    res.json({ message: url, status: "success" });
 
     // res.json({ message: "screenshot.png", status: "success" });
   } else {
