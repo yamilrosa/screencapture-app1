@@ -33,7 +33,7 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-app.post("/secret", (req, res) => {
+app.post("/secret", async (req, res) => {
   if (req.body.password == "qwerty") {
     let url = req.body.username;
 
