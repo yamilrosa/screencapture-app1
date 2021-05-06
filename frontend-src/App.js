@@ -55,17 +55,14 @@ function App() {
         </Switch> */}
       </div>
 
-      <footer className="border-top pt-3">
-        <p className="small text-center text-muted">
+      <footer className="border-top pt-3">{/* <p className="small text-center text-muted">
           <Link className="text-muted mr-1" to="/">
             Home
           </Link>{" "}
-          |{" "}
-          <Link className="text-muted ml-1" to="/about">
+          | <Link className="text-muted ml-1" to="/about">
             About Us
           </Link>
-        </p>
-      </footer>
+        </p> */}</footer>
     </BrowserRouter>
   );
 }

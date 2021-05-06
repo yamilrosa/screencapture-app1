@@ -47,7 +47,7 @@ app.post("/secret", async (req, res) => {
       fullPage: true
     });
     // await page.screenshot({ path: `screenshot${Date.now()}.png` });
-    await res.json({ message: url, status: "success" });
+    await res.json({ message: url, status: "success", screenshot: "./screenshot.png" });
 
     await browser.close();
 
