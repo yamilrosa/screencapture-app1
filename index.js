@@ -37,7 +37,7 @@ app.post("/secret", async (req, res) => {
   if (req.body.password == "qwerty") {
     let url = req.body.username;
 
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({ args: ["--no-sandbox"] });
     const page = await browser.newPage();
     await page.goto(url);
 
